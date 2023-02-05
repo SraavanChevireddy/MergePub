@@ -15,6 +15,7 @@
 		3C27D5C4298AF16300FA4E0B /* MergePublisherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27D5C3298AF16300FA4E0B /* MergePublisherUITests.swift */; };
 		3C27D5C6298AF16300FA4E0B /* MergePublisherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27D5C5298AF16300FA4E0B /* MergePublisherUITestsLaunchTests.swift */; };
 		3C27D5D3298AF17E00FA4E0B /* TestMergeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27D5D2298AF17E00FA4E0B /* TestMergeViewModel.swift */; };
+		3C6A897E298D6B5500E975EC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6A897D298D6B5500E975EC /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		3C27D5C3298AF16300FA4E0B /* MergePublisherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergePublisherUITests.swift; sourceTree = "<group>"; };
 		3C27D5C5298AF16300FA4E0B /* MergePublisherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergePublisherUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3C27D5D2298AF17E00FA4E0B /* TestMergeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMergeViewModel.swift; sourceTree = "<group>"; };
+		3C6A897D298D6B5500E975EC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				3C27D5AC298AF16300FA4E0B /* Assets.xcassets */,
 				3C27D5AE298AF16300FA4E0B /* Preview Content */,
 				3C27D5D2298AF17E00FA4E0B /* TestMergeViewModel.swift */,
+				3C6A897D298D6B5500E975EC /* Extensions.swift */,
 			);
 			path = MergePublisher;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				3C27D5AB298AF16200FA4E0B /* ContentView.swift in Sources */,
 				3C27D5A9298AF16200FA4E0B /* MergePublisherApp.swift in Sources */,
 				3C27D5D3298AF17E00FA4E0B /* TestMergeViewModel.swift in Sources */,
+				3C6A897E298D6B5500E975EC /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

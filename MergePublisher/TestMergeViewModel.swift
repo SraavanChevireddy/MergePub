@@ -14,19 +14,21 @@ class TestMergeViewModel: ObservableObject {
     var two = PassthroughSubject<String, Never>()
     var three = PassthroughSubject<String, Never>()
     var four = PassthroughSubject<String, Never>()
+    var five = PassthroughSubject<String, Never>()
+    var six = PassthroughSubject<String, Never>()
     
-    @Published var userName = ""
+    @Published var userName = "" 
     
     var disposables = Set<AnyCancellable>()
     
     init (){
-        one.sink { _ in
+        one
+            .dropFirst()
+            .removeDuplicates()
+            .assign(to: \.userName, on: self)
+            .store(in: &disposables)
             
-        } receiveValue: { value in
-            debugPrint("One value received")
-            print("USERNAME ==== \(self.userName)")
-        }.store(in: &disposables)
-        
+
         two.sink { _ in
             
         } receiveValue: { value in
@@ -65,7 +67,27 @@ class TestMergeViewModel: ObservableObject {
         one.share().upstream.assign(to: \.userName, on: self)
             .store(in: &disposables)
         
-
+        one
+            .share()
+            .multicast(subject: six)
+            .assign(to: \.userName, on: self)
+            .store(in: &disposables)
+        
+        six.sink { value in
+            print("YOU GOT new Username \(value)")
+        }.store(in: &disposables)
+        
+        
+        five
+            .map { value in
+                let cardNumber = value.replacingOccurrences(of: " ", with: "")
+                if cardNumber.starts(with: "4") {
+                    print("This is VISA")
+                }
+            }.sink {  _ in
+                print("DONE")
+            }.store(in: &disposables)
+        
     }
     
 }
